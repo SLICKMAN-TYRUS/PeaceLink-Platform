@@ -1,0 +1,7 @@
+django>=4.2
+psycopg2-binary>=2.9
+channels>=4.0
+channels_redis>=4.1
+Faker>=19.0
+python-dotenv>=1.0
+djangorestframework>=3.15

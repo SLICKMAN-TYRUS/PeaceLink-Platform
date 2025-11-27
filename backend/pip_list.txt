@@ -1,0 +1,14 @@
+Package         Version
+--------------- -------
+asgiref         3.11.0
+channels        4.3.2
+channels_redis  4.3.0
+Django          5.2.8
+Faker           38.2.0
+msgpack         1.1.2
+pip             24.0
+psycopg2-binary 2.9.11
+python-dotenv   1.2.1
+redis           7.1.0
+sqlparse        0.5.3
+tzdata          2025.2
