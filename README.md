@@ -467,13 +467,15 @@ npm run dev:client
 - **Backend Admin Panel:** http://127.0.0.1:8000/admin/
 - **API Endpoint:** http://127.0.0.1:8000/api/
 
-**Sample Test Accounts:**
-- Username: `chief_makuei` - Elder from Juba
-- Username: `sarah_nyandeng` - NGO worker from Bor  
-- Username: `james_lual` - Citizen from Malakal
-- Username: `grace_achol` - Citizen from Wau
+**Demo Test Accounts (All use password: `password123`):**
+- **Elder:** `chief_makuei` - Community leader from Juba, Central Equatoria
+- **NGO Worker:** `sarah_nyandeng` - Coordinator from Bor, Jonglei
+- **Citizen:** `james_lual` - Active member from Malakal, Upper Nile
+- **Citizen:** `grace_achol` - Community member from Wau, Western Bahr el Ghazal
 
-(Default password for test accounts is set in the sample data script)
+**Admin Access:** Username: `admin` (use password created during superuser setup)
+
+For complete credentials and demo flow, see [DEMO_CREDENTIALS.md](./DEMO_CREDENTIALS.md)
 
 ### Full Setup (First Time Installation)
 

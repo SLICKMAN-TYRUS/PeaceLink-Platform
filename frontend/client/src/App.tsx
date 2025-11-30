@@ -15,6 +15,7 @@ import LandingYouth from "@/pages/landing-youth";
 import LandingElder from "@/pages/landing-elder";
 import LandingLocalGov from "@/pages/landing-local-gov";
 import LandingManagement from "@/pages/landing-management";
+import LandingModerator from "@/pages/landing-moderator";
 import SignUp from "@/pages/signup";
 import Login from "@/pages/login";
 import Chat from "@/pages/chat";
@@ -54,10 +55,12 @@ function Router() {
       "/landing/elder",
       "/landing/local-government",
       "/landing/management",
+      "/landing/moderator",
       "/signup",
       "/login",
       "/local-government-login",
       "/local-government-signup",
+      "/landing-moderator",
     ];
     if (!user && !publicRoutes.includes(location)) {
       setLocation("/landing");
@@ -74,6 +77,8 @@ function Router() {
       <Route path="/landing-elder" component={LandingElder} />
       <Route path="/landing-local-gov" component={LandingLocalGov} />
       <Route path="/landing-management" component={LandingManagement} />
+      <Route path="/landing-moderator" component={LandingModerator} />
+      <Route path="/landing/moderator" component={LandingModerator} />
       <Route path="/test-accounts" component={TestAccounts} />
       <Route path="/signup" component={SignUp} />
       <Route path="/login" component={Login} />

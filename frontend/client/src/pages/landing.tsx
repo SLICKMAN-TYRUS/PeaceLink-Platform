@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import mapBackground from "@assets/generated_images/map_of_south_sudan_with_pins.png";
 import {
   ArrowRight,
@@ -21,6 +21,8 @@ type RolePortal = {
   icon: any;
   badgeClass: string;
   external?: boolean;
+  ctaHref?: string;
+  ctaLabel?: string;
 };
 
 const ROLE_PORTALS: RolePortal[] = [
@@ -51,6 +53,8 @@ const ROLE_PORTALS: RolePortal[] = [
     href: "/landing/moderator",
     icon: ShieldHalf,
     badgeClass: "bg-emerald-100 text-emerald-700",
+    ctaHref: "/login?role=moderator",
+    ctaLabel: "Moderator Login",
   },
   {
     title: "Admin Console",
@@ -63,6 +67,7 @@ const ROLE_PORTALS: RolePortal[] = [
 ];
 
 export default function Landing() {
+  const [, setLocation] = useLocation();
   return (
     <div className="min-h-screen bg-background flex flex-col font-sans">
       {/* Navbar */}
@@ -192,8 +197,11 @@ export default function Landing() {
                     </span>
                   </a>
                 ) : (
-                  <Link key={portal.title} href={portal.href}>
-                    <a className="group flex h-full flex-col rounded-3xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:shadow-lg">
+                  <div
+                    key={portal.title}
+                    className="flex h-full flex-col rounded-3xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:shadow-lg"
+                  >
+                    <Link href={portal.href} className="group flex flex-1 flex-col focus:outline-none">
                       <div className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl ${portal.badgeClass}`}>
                         <portal.icon className="h-6 w-6" />
                       </div>
@@ -204,8 +212,18 @@ export default function Landing() {
                       <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary">
                         Explore <ArrowRight className="h-4 w-4" />
                       </span>
-                    </a>
-                  </Link>
+                    </Link>
+                    {portal.ctaHref && portal.ctaLabel && (
+                      <Button
+                        type="button"
+                        size="sm"
+                        className="mt-4 w-full rounded-xl bg-primary text-primary-foreground hover:bg-primary/90"
+                        onClick={() => setLocation(portal.ctaHref!)}
+                      >
+                        {portal.ctaLabel}
+                      </Button>
+                    )}
+                  </div>
                 )
               ))}
             </div>

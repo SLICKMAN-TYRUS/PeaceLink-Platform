@@ -1,9 +1,9 @@
 # PeaceLink Platform - 9-Minute Demo Script
 
-**Date:** November 27, 2025  
+**Date:** November 22, 2025  
 **Presenter:** SLICKMAN-TYRUS  
 **Target Time:** 8-9 minutes  
-**Assignment Due:** Friday 2am
+**Assignment Due:** Friday 28th, 2 am.
 
 ---
 
@@ -434,4 +434,3 @@ python3 manage.py runserver 8000
 
 ---
 
-**Good luck with your demo! You've built a comprehensive, feature-rich platform that directly addresses real-world peacebuilding challenges. Present with confidence!**
